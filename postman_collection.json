@@ -1,0 +1,303 @@
+{
+  "info": {
+    "_postman_id": "5f39e8cd-9190-4231-8243-9f743cb62551",
+    "name": "postman_collection.json",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44201741",
+    "_collection_link": "https://go.postman.co/collection/44201741-5f39e8cd-9190-4231-8243-9f743cb62551?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CRUD de Territórios",
+      "item": [
+        {
+          "name": "1. Criar Território",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Entre rios\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/territorios",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "territorios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2. Listar Territórios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/territorios",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "territorios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3. Editar Território",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Cocais\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/territorios/3",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "territorios",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4. Remover Território",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/territorios/4",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "territorios",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "CRUD de Cidades",
+      "item": [
+        {
+          "name": "1. Criar Cidade",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigo_ibge\": 2211001,\r\n  \"nome\": \"Teresina\",\r\n  \"territorio_id\": 5\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/cidades",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "cidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2. Listar Todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/cidades",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "cidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3. Filtrar por Nome",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/cidades?nome=Tere",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "cidades"
+              ],
+              "query": [
+                {
+                  "key": "nome",
+                  "value": "Tere"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4. Filtrar por Território",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/cidades?territorio_id=5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "cidades"
+              ],
+              "query": [
+                {
+                  "key": "territorio_id",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "5. Editar Cidade",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigo_ibge\": 2211001,\r\n  \"nome\": \"Teresina Capital\",\r\n  \"territorio_id\": 5\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/cidades/2211001",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "cidades",
+                "2211001"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "6. Remover Cidade",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/cidades/2211001",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "cidades",
+                "2211001"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

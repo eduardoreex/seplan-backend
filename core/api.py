@@ -45,7 +45,7 @@ def listar_cidades(request, nome: str = None, territorio_id: int = None):
         cidades = cidades.filter(territorio_id=territorio_id)
     return cidades
 
-@router.post("/cidade", response=CidadeOut)
+@router.post("/cidades", response=CidadeOut)
 def criar_cidade(request, data: CidadeIn):
     cidade =  Cidade.objects.create(codigo_ibge=data.codigo_ibge,nome = data.nome , territorio_id= data.territorio_id)
     return  cidade
