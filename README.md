@@ -77,8 +77,13 @@ python manage.py migrate
 
 python manage.py runserver
 
-A API estará disponível em: http://127.0.0.1:8000/api/docs
-(Acesse para testar os endpoints diretamente pelo navegador via Swagger)
+Basta acessar a raiz ou a rota da documentação no seu navegador para abrir o Swagger interativo: http://127.0.0.1:8000/ ou http://127.0.0.1:8000/api/docs
+A API estará disponível.
+
+### Painel Administrativo (Django Admin)
+Para gerenciar os dados via interface gráfica nativa do Django, você precisará criar um superusuário. Com o servidor pausado, execute:
+
+python manage.py createsuperuser
 
 Testando com Postman (Task 3)
 
