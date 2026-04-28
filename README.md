@@ -1,7 +1,5 @@
 API SEPLAN-PI - Sistema de Gestão de Territórios e Cidades
 
-Repositório oficial do teste técnico para a vaga de Estágio em Desenvolvimento Backend na Secretaria de Planejamento do Estado do Piauí (SEPLAN-PI).
-
 Este projeto consiste numa API REST para a gestão da divisão territorial e municipal do Estado, focada em integridade de dados e facilidade de consumo.
 
 Stack Tecnológica:
